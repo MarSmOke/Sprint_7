@@ -2,13 +2,8 @@ import requests
 import data
 
 
-def courier_login():
-    response = requests.post(data.login_url, data=data.existing_user)
-    return response
-
-
-def login_without_fields(payload):
-    response = requests.post(data.login_url, data=payload)
+def courier_login(payload):
+    response = requests.post(url=data.main_url+data.login_url, data=payload)
     return response
 
 
@@ -21,5 +16,5 @@ def login_incorrect_data():
         "password": password
     }
 
-    response = requests.post(data.login_url, data=payload)
+    response = requests.post(url=data.main_url+data.login_url, data=payload)
     return response

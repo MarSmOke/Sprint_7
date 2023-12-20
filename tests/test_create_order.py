@@ -4,8 +4,8 @@ from api_methods.orders import *
 
 
 class TestOrder:
-    @allure.title("Create an order with correct data")
-    @allure.description("Successful order with different colors")
+    @allure.title("Successful order creation")
+    @allure.description("Create order with valid color combinations")
     @pytest.mark.parametrize(
         'colors',
         [
