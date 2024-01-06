@@ -1,23 +1,21 @@
-API-тесты для сервиса Яндекс.Самокат.\
+API tests for the Yandex.Scooter service\
 
-**Структура репозитория**:
-- **api_methods**: содержит методы для работы с API;
-- **tests**: содержит тесты, покрывающие указанные эндпоинты API сайта;
-- **allure_results**: содержит результаты прогона тестов;
-- **data.py**: содержит константы (URLs, данные профиля, данные заказа) для тестов;
-- **requirements.txt**: содержит данные о пакетах для настройки окружения для успешного запуска.\
+**Repository structure**:
+- **api_methods**: contains methods for working with the API;
+- **tests**: contains tests covering the specified endpoints of the API;
+- **allure_results**: contains the results of running tests;
+- **data.py**: contains constants (URLs, profile data, order data) for tests;
+- **requirements.txt**: contains information about packages to configure the environment for a successful launch.\
 
-Реализованные тесты:
-- test_create_courier - тесты на создание курьера;
-- test_create_order - тесты на создание заказа;
-- test_login_courier - тесты на логин курьера;
-- test_order_list - тест на получение списка заказов.
+Implemented tests:
+- test_create_courier - tests for creating a courier;
+- test_create_order - tests for creating an order;
+- test_login_courier - tests for courier login;
+- test_order_list - test for getting a list of orders.
 
-Команда для запуска: python -m pytest tests \
-Команда для чтения результатов: allure serve allure_results
+Command to run: python -m pytest tests \
+Command to read results: allure serve allure_results
 
-! Известные баги: 
-- попытка логина только с одним параметром логина отдаёт 504 (падение по таймауту);
-- 404 ошибка как на попытку логина несуществующего юзера, так и на попытку логина с опечатками в логине/пароле.
-
-
+! Known bugs:
+- login attempt with only one login parameter returns 504 (failure due to timeout);
+- 404 error for a login attempt by a non-existent user and for a login attempt with typos in the login/password.
